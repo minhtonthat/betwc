@@ -100,7 +100,7 @@ export default {
       var team = '';
       var vm = this;
       this.bets.forEach(bet => {
-        if(countryId === bet.countryWin){
+        if(bet.matchId === vm.match['.key'] && countryId === bet.countryWin){
           var user = vm.users.find(user => user.email === bet.userId);
           if(team){
             team += ', ';
